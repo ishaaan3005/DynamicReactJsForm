@@ -1,38 +1,111 @@
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+label {
+  display: block;
+  margin: 10px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.submitted-data {
+  margin-top: 20px;
+}
+
+.submitted-data h2 {
+  margin-bottom: 10px;
+}
+
+.submitted-data table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.submitted-data th,
+.submitted-data td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.submitted-data tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.submitted-data tr:hover {
+  background-color: #ddd;
+}
+
+.submitted-data th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .submitted-data table,
+  .submitted-data th,
+  .submitted-data td {
+    display: block;
+    width: 100%;
+  }
+
+  .submitted-data th {
+    text-align: left;
+  }
+
+  .submitted-data td {
+    text-align: left;
+    padding: 10px 0;
+  }
+
+  .submitted-data tr {
+    display: flex;
+    flex-direction: column;
   }
 }
